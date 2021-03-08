@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Flexbox Dashboard</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+
+<style>
+  /*-----------------------
+      dashboard
+  -----------------------*/
+
+  body {
+    display: grid;
+    padding: 1rem;
+    height: 100vh;
+  }
+
+  dashboard {
+    display: flex;
+    flex-wrap: wrap;
+    --margin: .5rem;
+    --modifier: calc(64rem - 100%);
+    margin: -.5rem;
+  }
+
+  dashboard > * {
+    margin: var(--margin);
+  }
+
+  header, footer {
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+
+  main {
+    flex-grow: 3;
+    flex-basis: calc(var(--modifier) * 999);
+    min-height: 80vh;
+  }
+
+  main > * {
+    margin-bottom: 2rem;
+  }
+
+  nav {
+    flex-grow: 1;
+    flex-basis: calc(var(--modifier) * 999);
+  }
+  /*-----------------------
+      Demo styles
+  -----------------------*/
+  html {
+    font-family: sans-serif;
+    font-size: 100%;
+    block-size: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-size: 1rem;
+    line-height: 1.5;
+    block-size: 100%;
+    background-color: #eee;
+  }
+
+  h1, h2, h3, p {
+    font-size: inherit;
+    max-inline-size: 50ch;
+  }
+
+  div,header, nav, main, footer {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: .5rem;
+  }
+</style>
+
+  </head>
+  <body>
+
+    <dashboard>
+
+      <header>
+        <h1>Header</h1>
+      </header>
+
+      <nav>
+        <h3>Navigation</h3>
+      </nav>
+
+      <main>
+        <h2>Main</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </main>
+
+      <footer>
+        <h3>Footer</h3>
+      </footer>
+
+    </dashboard>
+
+  </body>
+</html>
